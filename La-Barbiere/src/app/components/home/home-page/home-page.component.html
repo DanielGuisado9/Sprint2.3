@@ -1,0 +1,19 @@
+<!-- Navbar: se emite el evento userInfoRequested que activa displayUserInfo() -->
+<app-navbar (userInfoRequested)="displayUserInfo()"></app-navbar>
+
+<!-- Contenido principal de la página -->
+<app-hero-section></app-hero-section>
+<app-content-list></app-content-list>
+<app-ranking-cortes></app-ranking-cortes>
+<app-promotions></app-promotions>
+<app-footer></app-footer>
+
+<!-- Modal para mostrar la información de usuario -->
+<div class="modal-overlay" *ngIf="showUserInfo" (click)="hideUserInfo()">
+  <div class="user-info-panel" (click)="$event.stopPropagation()">
+    <!-- Botón de cierre -->
+    <button class="close-btn" (click)="hideUserInfo()">X</button>
+    <!-- Componente que muestra la información de usuario -->
+    <app-user-info></app-user-info>
+  </div>
+</div>

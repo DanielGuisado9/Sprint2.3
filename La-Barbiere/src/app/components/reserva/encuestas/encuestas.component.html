@@ -1,0 +1,15 @@
+<div class="encuesta-container">
+  <h2>Encuesta de Satisfacción</h2>
+
+  <label>¿Cómo calificas nuestro servicio?</label>
+  <div class="stars">
+    <span *ngFor="let star of [1,2,3,4,5]" 
+          (click)="rating = star" 
+          [class.selected]="rating >= star">★</span>
+  </div>
+
+  <label>Comentarios o sugerencias:</label>
+  <textarea [(ngModel)]="comment" placeholder="Escribe tu comentario aquí..."></textarea>
+
+  <button (click)="submitSurvey()">Enviar</button>
+</div>

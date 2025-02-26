@@ -1,0 +1,75 @@
+<div class="modal-overlay">
+    <div class="reserva-panel">
+      <button class="close-btn" (click)="goBack()">X</button>
+      <div class="reserva-promocion-container">
+        <h2>Reserva Promoción</h2>
+        <form (ngSubmit)="onReserve(reservationForm)" #reservationForm="ngForm" novalidate>
+          <!-- Campo Nombre -->
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              [(ngModel)]="nombre"
+              required
+              minlength="2"
+              #nombreField="ngModel"
+            >
+            <div *ngIf="nombreField.invalid && (nombreField.touched || reservationForm.submitted)" class="error">
+              <span *ngIf="nombreField.errors?.['required']">El nombre es obligatorio.</span>
+              <span *ngIf="nombreField.errors?.['minlength']">El nombre debe tener al menos 2 caracteres.</span>
+            </div>
+          </div>
+          
+          <!-- Campo Teléfono -->
+          <div>
+            <label for="telefono">Teléfono:</label>
+            <input
+              id="telefono"
+              name="telefono"
+              type="text"
+              [(ngModel)]="telefono"
+              required
+              pattern="^[0-9]{9}$"
+              #telefonoField="ngModel"
+            >
+            <div *ngIf="telefonoField.invalid && (telefonoField.touched || reservationForm.submitted)" class="error">
+              <span *ngIf="telefonoField.errors?.['required']">El teléfono es obligatorio.</span>
+              <span *ngIf="telefonoField.errors?.['pattern']">El teléfono debe contener solo 9 dígitos numéricos.</span>
+            </div>
+          </div>
+          
+          <!-- Campo Correo -->
+          <div>
+            <label for="correo">Correo:</label>
+            <input
+              id="correo"
+              name="correo"
+              type="email"
+              [(ngModel)]="correo"
+              required
+              #correoField="ngModel"
+            >
+            <div *ngIf="correoField.invalid && (correoField.touched || reservationForm.submitted)" class="error">
+              <span *ngIf="correoField.errors?.['required']">El correo es obligatorio.</span>
+              <span *ngIf="correoField.errors?.['email']">El correo debe ser válido.</span>
+            </div>
+          </div>
+          
+          <button type="submit">Reservar</button>
+        </form>
+        
+        <!-- Mensaje de error general si el formulario no es válido -->
+        <div *ngIf="errorMessage" class="error general-error">
+          {{ errorMessage }}
+        </div>
+        
+        <!-- Mensaje de confirmación -->
+        <div *ngIf="confirmationMessage" class="confirmation">
+          {{ confirmationMessage }}
+        </div>
+      </div>
+    </div>
+  </div>
+  

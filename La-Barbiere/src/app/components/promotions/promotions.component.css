@@ -1,0 +1,41 @@
+.promotions-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .promotion-card {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .promotion-card img {
+    width: 200px;
+    object-fit: cover;
+  }
+  
+  .promotion-details {
+    padding: 15px;
+    flex: 1;
+  }
+  
+  .promotion-details h3 {
+    margin-top: 0;
+  }
+  
+  .promotion-details button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .promotion-details button:hover {
+    background-color: #0056b3;
+  }
+  

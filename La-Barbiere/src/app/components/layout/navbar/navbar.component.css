@@ -1,0 +1,218 @@
+.navbar {
+  background: linear-gradient(90deg, #ff0000, #ffffff, #0000ff);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilos para el menú de navegación izquierdo */
+.left-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.left-menu .navbar-item {
+  margin-right: 40px;
+  /* Aplica el mismo tamaño de fuente y color que tenías para los enlaces */
+  font-size: 20px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+/* Si quieres mantener la regla para <a>, puedes unificarlas así */
+.left-menu .navbar-item a {
+  color: inherit; /* Toma el color de .navbar-item */
+  text-decoration: none;
+  font-size: inherit; /* Toma el font-size de .navbar-item */
+}
+
+/* Efecto hover para ambos */
+.left-menu .navbar-item:hover,
+.left-menu .navbar-item a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+
+.navbar-user i {
+  color: #000000;
+  font-size: 40px; /* Mismo tamaño que el de ajustes */
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-user i:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.left-menu .navbar-item a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Estilos para la sección de usuario y ajustes */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right > div {
+  margin-left: 20px;
+}
+
+.navbar-right a {
+  color: #000000;
+  font-size: 40px; /* Se incrementa de 24px a 32px */
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-right a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left-menu .navbar-item {
+    margin: 10px 0;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Estilos para el contenedor del dropdown */
+.user-dropdown {
+  position: absolute;
+  font-size: 20px;
+  top: 60px; /* Ajusta según la altura de tu navbar */
+  right: 80px; /* Ajusta para que se alinee con el ícono de usuario */
+  background-color: #000000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista sin viñetas y sin márgenes */
+.user-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para cada opción del dropdown */
+.user-dropdown li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #ffffff; /* Color de las palabras en negro */
+}
+
+.user-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.user-dropdown li a {
+  color: #ffffff; /* Color negro por defecto */
+  text-decoration: none;
+}
+
+.user-dropdown li a:hover {
+  color: #ffffff; /* Mantiene el color negro al hover */
+}
+
+.haircut-filter-dropdown {
+  position: absolute;
+  top: 100%; /* Se ubica justo debajo del navbar */
+  left: 10px; /* Ajusta según necesites para alinear con el item "Cortes" */
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1500;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos existentes para el navbar se mantienen... */
+
+/* Overlay para el dropdown del filtro */
+.haircut-filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* transparente para detectar clicks fuera */
+  z-index: 1500;
+}
+
+/* Panel del filtro de cortes */
+.haircut-filter-dropdown {
+  position: absolute;
+  top: 60px; /* Ajusta según la altura del navbar */
+  left: 10px; /* Ajusta para alinear con el item "Cortes" */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1501;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón de cierre en el dropdown */
+.close-filter-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #333;
+}

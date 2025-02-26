@@ -1,0 +1,125 @@
+/* Contenedor principal con animación de aparición y escalado */
+.haircut-filter {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: popIn 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) rotate(-5deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  /* Controles de filtro con efecto hover y focus */
+  .filter-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-controls input,
+  .filter-controls select {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .filter-controls input:hover,
+  .filter-controls select:hover {
+    transform: scale(1.02);
+  }
+  
+  .filter-controls input:focus,
+  .filter-controls select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Lista de cortes con scroll y animación de entrada */
+  .haircut-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    animation: fadeInList 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeInList {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Tarjeta individual con animaciones hover interactivas */
+  .haircut-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Efecto de hover: elevación y pequeño giro */
+  .haircut-card:hover {
+    transform: translateY(-8px) rotate(0.5deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animación interna en la tarjeta (por ejemplo, un destello) */
+  .haircut-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.5s ease;
+  }
+  
+  .haircut-card:hover::after {
+    left: 100%;
+  }
+  
+  /* Títulos y detalles */
+  .haircut-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .haircut-card:hover h3 {
+    color: #007bff;
+  }
+  
+  .haircut-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .haircut-card:hover p {
+    color: #444;
+  }
+  

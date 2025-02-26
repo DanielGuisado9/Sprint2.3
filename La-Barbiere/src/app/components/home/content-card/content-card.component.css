@@ -1,0 +1,78 @@
+/* Estilo general de la tarjeta */
+.card {
+    width: 350px; /* Aumentamos el tamaño de las tarjetas */
+    height: 600px; /* Ajustamos la altura */
+    background-color: #fff; /* Fondo blanco para un diseño limpio */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar las tarjetas */
+    overflow: hidden; /* Aseguramos que no se desborden elementos */
+    text-align: center; /* Centramos los textos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación para hover */
+    margin-bottom: 50px; /* Espaciado vertical entre tarjetas */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Incrementamos la sombra */
+  }
+  
+  /* Imagen de la tarjeta */
+  .card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 2px solid #eee; /* Línea debajo de la imagen */
+  }
+  
+  /* Nombre del corte */
+  .card h3 {
+    font-size: 1.4rem; /* Aumentamos el tamaño del texto */
+    font-weight: bold;
+    margin: 15px 0 5px;
+    color: #333; /* Color de texto */
+    font-family: 'Dancing Script', cursive; /* Tipografía elegante */
+  }
+  
+  /* Descripción */
+  .card p {
+    font-size: 1.1rem; /* Aumentamos el tamaño */
+    color: #666; /* Color secundario para contraste */
+    margin: 10px 20px;
+    font-family: 'Open Sans', sans-serif; /* Tipografía más moderna */
+  }
+  
+  /* Precio */
+  .card strong {
+    display: block;
+    font-size: 1.2rem; /* Tamaño del precio */
+    color: #444;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  /* Botón de reserva */
+.reserve-button {
+    background-color: #007bff; /* Azul estándar */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px; /* Espaciado superior */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover y estado activo del botón */
+  .reserve-button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+  }
+  
+  .reserve-button:active {
+    background-color: #003f7f; /* Azul aún más oscuro al hacer clic */
+  }
+  
+  

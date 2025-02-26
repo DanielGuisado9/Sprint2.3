@@ -1,0 +1,33 @@
+<div class="haircut-filter">
+    <h2>Buscar y Filtrar Cortes de Pelo</h2>
+    <div class="filter-controls">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar cortes..." />
+      <select [(ngModel)]="styleFilter">
+        <option value="">Todos los estilos</option>
+        <option value="Clásico">Clásico</option>
+        <option value="Moderno">Moderno</option>
+        <option value="Deportivo">Deportivo</option>
+        <option value="Undercut">Undercut</option>
+        <option value="Fade">Fade</option>
+        <option value="Vintage">Vintage</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Barba">Barba</option>
+        <option value="Capas">Capas</option>
+      </select>
+    </div>
+    
+    <div class="haircut-list">
+      <div 
+        *ngFor="let haircut of filteredHaircuts" 
+        class="haircut-card" 
+        (click)="goToReservation()"
+        style="cursor: pointer;"
+      >
+        <h3>{{ haircut.name }}</h3>
+        <p><strong>Estilo:</strong> {{ haircut.style }}</p>
+        <p>{{ haircut.description }}</p>
+        <p><strong>Precio:</strong> {{ haircut.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+      </div>
+    </div>
+  </div>
+  

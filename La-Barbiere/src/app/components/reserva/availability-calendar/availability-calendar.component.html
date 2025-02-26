@@ -1,0 +1,30 @@
+<div class="calendar-container">
+  <h2>Calendario de Disponibilidad</h2>
+
+  <!-- Selección de fecha -->
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona una fecha</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" (ngModelChange)="selectedTime = null" [min]="minDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <!-- Horas disponibles -->
+  <div *ngIf="selectedDate">
+    <h3>Horas disponibles:</h3>
+    <div class="time-slots">
+      <button *ngFor="let time of availableTimes" 
+              [class.disabled]="unavailableHours.includes(time)"
+              (click)="selectTime(time)" 
+              [disabled]="unavailableHours.includes(time)">
+        {{ time }}
+      </button>
+    </div>
+  </div>
+
+  <p *ngIf="selectedTime">Has seleccionado: <strong>{{ selectedTime }}</strong></p>
+  <button type="submit" class="btn" (click)="onSubmit($event)">Confirmar Reserva</button>
+
+  <!-- Encuesta de satisfacción con evento para cerrarla -->
+  <app-encuestas *ngIf="encuestaVisible" (cerrarEncuesta)="cerrarEncuesta()"></app-encuestas>
+</div>

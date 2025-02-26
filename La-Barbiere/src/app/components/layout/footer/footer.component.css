@@ -1,0 +1,58 @@
+.footer {
+  background: linear-gradient(90deg,#ff0000, #ffffff, #0000ff);
+  padding: 20px 20px; /* Aumentado el padding superior e inferior */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 9999; /* Añadido para superponer el footer */
+}
+
+.footer-brand a {
+  font-size: 32px; /* Aumentado el tamaño de la fuente */
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-item {
+  margin-left: 20px;
+}
+
+.footer-item a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px; /* Aumentado el tamaño de la fuente */
+  transition: color 0.3s;
+}
+
+.footer-item a:hover {
+  color: #2546ec;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-item {
+    margin: 10px 0;
+  }
+}

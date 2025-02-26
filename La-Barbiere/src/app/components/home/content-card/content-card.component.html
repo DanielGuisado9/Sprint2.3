@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<div class="card-container">
+    <div class="card">
+      <img [src]="image" [alt]="name" />
+      <h3>{{ name }}</h3>
+      <p>{{ description }}</p>
+      <p><strong>Precio:</strong> {{ price }} €</p>
+      <a [routerLink]="['/reserva']" class="btn btn-primary" style="background-color: rgb(4, 75, 197); color: white; border-radius: 12px; padding: 10px 20px; font-size: 16px; text-align: center; display: block; margin: 20px auto 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: fit-content;">Reserva</a>
+
+      
+    </div>
+  </div>
+  

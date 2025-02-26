@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<div class="content-list">
+    <div class="content-list-container">
+      <app-content-card
+        *ngFor="let haircut of haircuts"
+        [name]="haircut.name"
+        [description]="haircut.description"
+        [price]="haircut.price"
+        [image]="haircut.image">
+      </app-content-card>
+    </div>
+  </div>
+  

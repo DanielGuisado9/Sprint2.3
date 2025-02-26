@@ -1,0 +1,12 @@
+.user-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-color: #fdfdfd;
+  }
+  
+  .user-card p {
+    margin: 0.25rem 0;
+  }
+  

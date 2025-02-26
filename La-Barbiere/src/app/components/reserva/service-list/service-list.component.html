@@ -1,0 +1,14 @@
+<div class="service-list-container">
+    <h2 class="service-title">Nuestros Servicios</h2>
+    <ul class="service-list">
+      <li class="service-item" *ngFor="let service of services">
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+        <p><strong>Duración:</strong> {{ service.duration }}</p>
+      </li>
+    </ul>
+  </div>
+
+<ng-template #noServices>
+    <p>No hay servicios disponibles.</p>
+</ng-template>

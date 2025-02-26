@@ -1,0 +1,44 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Menú de navegación izquierdo -->
+    <ul class="navbar-menu left-menu">
+      <li class="navbar-item"><a href="/home">Inicio</a></li>
+      <li class="navbar-item"><a href="/agenda">Agenda</a></li>
+      <li class="navbar-item"><a href="/about">Acerca de</a></li>
+      <li class="navbar-item"><a href="/contact">Contacto</a></li>
+      <!-- Nuevo item para el filtro de cortes -->
+      <li class="navbar-item" (click)="toggleHaircutFilter()" style="cursor: pointer;">
+        Cortes
+      </li>
+    </ul>
+
+    <!-- Elementos de usuario y ajustes en el lado derecho -->
+    <div class="navbar-right">
+      <div class="navbar-user" (click)="toggleUserDropdown()" style="cursor: pointer;">
+        <i class="fas fa-user"></i>
+        <span class="user-info"></span>
+      </div>
+      <div class="navbar-settings">
+        <a href="/notFound">
+          <i class="fas fa-cog"></i>
+        </a>
+      </div>
+      
+      <!-- Dropdown del usuario -->
+      <div class="user-dropdown" *ngIf="showUserDropdown">
+        <ul>
+          <li (click)="showUserInfo()">Ver información del usuario</li>
+          <li (click)="logout()">Cerrar sesión</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Overlay para el dropdown del filtro de cortes -->
+  <div class="haircut-filter-overlay" *ngIf="showHaircutFilter" (click)="closeHaircutFilter()">
+    <div class="haircut-filter-dropdown" (click)="$event.stopPropagation()">
+      <button class="close-filter-btn" (click)="closeHaircutFilter()">X</button>
+      <app-haircut-filter></app-haircut-filter>
+    </div>
+  </div>
+</nav>

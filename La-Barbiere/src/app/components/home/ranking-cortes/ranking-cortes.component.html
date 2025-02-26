@@ -1,0 +1,13 @@
+<div class="ranking-container">
+    <h2>🏆 Ranking de Popularidad de Cortes de Pelo 💇‍♂️💇‍♀️</h2>
+    
+    <ul>
+      <li *ngFor="let corte of cortesDePelo; let i = index" class="ranking-item">
+        <span class="position">{{ i + 1 }}.</span>
+        <span class="corte-nombre">{{ corte.nombre }}</span>
+        <span class="votes">⭐ {{ corte.votos }} votos</span>
+        <button (click)="votar(i)">Votar</button>
+      </li>
+    </ul>
+  </div>
+  
