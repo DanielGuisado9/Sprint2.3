@@ -37,152 +37,79 @@ Acceder a AEMET API SWAGGER para obtener toda la información relevante a volcar
 
 # Ejercicio2
 ## Historias de Usuario
+🔸 Historia de Usuario 1
 - Funcionalidad 1: Sistema de filtrado y búsquedas 
-✏️ Título: Búsqueda de Productos y Servicios
+✏️ Título: Búsqueda y Filtrado de Productos y Servicios
 
 📝 Descripción:
-"Como usuario, quiero poder buscar productos y servicios por nombre para encontrar rápidamente lo que necesito".
+"Como usuario, quiero poder buscar productos y servicios para encontrar rápidamente lo que necesito".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario ingresa un término en la barra de búsqueda, el sistema deberá mostrar resultados relevantes en tiempo real.
-
 Cuando el usuario realiza una búsqueda y no hay coincidencias, se deberá mostrar un mensaje indicando que no hay resultados.
-
 Entonces, la búsqueda deberá ser eficiente y mostrar los resultados en menos de 2 segundos.
-
-
-🔸 Historia de Usuario 2
-
-✏️ Título: Filtrado de Resultados
-
-📝 Descripción:
-"Como usuario, quiero poder filtrar los productos por categoría y precio para encontrar opciones que se ajusten a mis necesidades".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario selecciona una o varias opciones de filtrado, los resultados deberán actualizarse dinámicamente.
-
 Cuando el usuario combina varios filtros, la búsqueda deberá reflejar solo los productos que cumplan con todas las condiciones aplicadas.
-
 Entonces, los filtros deberán aplicarse en menos de 2 segundos para garantizar una experiencia fluida.
-
-
-🔸 Historia de Usuario 3
-
-✏️ Título: Paginación de Resultados
-
-📝 Descripción:
-"Como usuario, quiero poder navegar entre páginas de resultados cuando hay muchos productos para revisar varias opciones".
 
 🔸 Criterios de Aceptación:
 
 Dado que hay más resultados de los que pueden mostrarse en una sola página, el sistema deberá dividirlos en varias páginas con controles de navegación.
-
 Cuando el usuario cambia de página, los nuevos resultados deberán cargarse sin afectar el rendimiento de la web.
-
 Entonces, la navegación entre páginas deberá ser rápida y sin interrupciones, asegurando que el usuario pueda encontrar fácilmente lo que busca.
 
+🔸 Historia de Usuario 2
 - Funcionalidad 2: Sistema de perfil de usuario
-
-🔸 Historia de Usuario 1
-
-✏️ Título: Acceso a la pestaña de perfil
+✏️ Título: Sistema de perfil de usuario
 
 📝 Descripción:
-"Como usuario, quiero poder acceder a mi perfil desde la barra de navegación para ver mi información personal".
+"Como usuario, quiero poder acceder a mi perfil desde la barra de navegación para poder ver mi información personal".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario hace clic en el icono de usuario, se deberá desplegar un menú con opciones.
-
 Cuando el usuario seleccione "Ver información del usuario", se mostrará una pestaña emergente con sus datos.
-
 Entonces, el usuario podrá ver su información de manera clara y sin retrasos.
-
-🔸 Historia de Usuario 2
-
-✏️ Título: Cierre de sesión
-
-📝 Descripción:
-"Como usuario, quiero poder cerrar mi sesión desde el menú desplegable para salir de mi cuenta de manera segura".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario abre el menú del icono de usuario, se deberá mostrar la opción "Cerrar sesión".
-
 Cuando el usuario haga clic en "Cerrar sesión", su sesión deberá cerrarse correctamente y redirigirlo a la página de inicio.
-
 Entonces, la sesión se cerrará de manera segura y sin errores.
-
-🔸 Historia de Usuario 3
-
-✏️ Título: Experiencia de usuario en la pestaña emergente
-
-📝 Descripción:
-"Como usuario, quiero que la información en la pestaña emergente se vea clara y bien organizada para acceder rápidamente a mis datos".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario abre la pestaña de información, esta deberá mostrar nombre, teléfono y correo de forma clara.
-
 Cuando el usuario interactúe con la pestaña, esta no deberá interferir con el resto de la navegación.
-
 Entonces, la pestaña emergente deberá cerrarse correctamente al hacer clic fuera de ella o presionar "Cerrar".
 
-
+🔸 Historia de Usuario 3
 - Funcionalidad 3: Sistema de reserva con promociones y descuentos
-Validar que el formulario no permita envíos con campos vacíos.
-
-Probar que los datos ingresados se guardan correctamente en la base de datos.
-
-Confirmar que el usuario recibe un mensaje de confirmación tras enviar la reserva.
-
-Historias de Usuario
-
-🔸 Historia de Usuario 1
-
-✏️ Título: Visualización de Promociones
+✏️ Título: Sistema de reserva con promociones y descuentos
 
 📝 Descripción:
-"Como usuario, quiero ver las promociones disponibles en la página de inicio para conocer descuentos y ofertas especiales".
+"Como usuario, quiero ver las promociones disponibles en la página de inicio para poder reservar una cita con descuento".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario accede a la página de inicio, deberá visualizar una sección con las promociones activas.
-
 Cuando el usuario seleccione una promoción, se mostrará la descripción y los detalles de la oferta.
-
 Entonces, el usuario podrá decidir si quiere aprovechar la promoción y reservarla.
-
-🔸 Historia de Usuario 2
-
-✏️ Título: Reserva de Promociones
-
-📝 Descripción:
-"Como usuario, quiero poder reservar una promoción ingresando mis datos para aprovechar la oferta sin complicaciones".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario hace clic en "Aprovechar oferta", se deberá abrir una pestaña emergente con un formulario.
-
 Cuando el usuario ingrese sus datos y haga clic en "Reservar", la información deberá enviarse al sistema correctamente.
-
 Entonces, el usuario recibirá una confirmación indicando que su reserva fue exitosa.
-
-🔸 Historia de Usuario 3
-
-✏️ Título: Validación y Confirmación de Reserva
-
-📝 Descripción:
-"Como usuario, quiero recibir una confirmación tras enviar mi reserva para asegurarme de que la promoción se ha registrado correctamente".
 
 🔸 Criterios de Aceptación:
 
 Dado que el usuario completa el formulario de reserva, el sistema deberá validar que todos los campos estén completos.
-
 Cuando la reserva se envíe correctamente, se mostrará un mensaje de confirmación.
-
 Entonces, el usuario podrá estar seguro de que su promoción ha sido registrada y podrá utilizarla según los términos indicados.
 
 ## Análisis del problema
