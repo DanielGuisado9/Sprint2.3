@@ -1,7 +1,7 @@
 
 # Ejercicio1
 ## Análisis del problema
-📌 Ejercicio 1: Implementación de una Web del Tiempo con la API de AEMET
+📌 Ejercicio 1: Perfeccionamiento de la implementación de una Web del Tiempo con la API de AEMET
 🎯 Contexto
 El objetivo de este ejercicio es desarrollar una aplicación web del tiempo que permita a los usuarios consultar información meteorológica de diferentes ubicaciones de España, utilizando la API de AEMET (Agencia Estatal de Meteorología).
 
@@ -11,16 +11,11 @@ Pronóstico por horas y días.
 Mapa meteorológico interactivo.
 Índices de calidad del aire y avisos meteorológicos.
 ⚙️ Requerimientos Funcionales
-1️⃣ Consulta del tiempo actual por provincia
-Introducción de la ubicación en un buscador (sólo por provincia).
-Visualización del estado actual (temperatura, condición climática y velocidad del viento).
-Iconos dinámicos según la condición climática (soleado, nublado, lluvia, etc.).
-Ejemplo en eltiempo.es
-2️⃣ Pronóstico detallado por horas y días
-Representación visual de la evolución del tiempo (gráficos de temperatura, precipitaciones, etc.).
-Predicción por días con intervalos de mañana (8:00), tarde (15:00) y noche (21:00).
-Predicción de mínimo 48 horas, es decir, dos días posterior al actual.
-Ejemplo en eltiempo.es
+1️⃣ Mapa meteorológico interactivo
+Mapa con capas de temperatura, lluvia y viento.
+Capacidad para seleccionar diferentes tipos de datos.
+2️⃣ Personalización de la vista
+Cambio de tema claro/oscuro para todo el aplicativo.
 
 🔗 Documentación de la API de AEMET
 Para obtener los datos meteorológicos, se utilizará la API de AEMET, que proporciona información detallada sobre el clima en tiempo real y pronósticos.
@@ -29,11 +24,7 @@ Acceder a AEMET API y obtener la clave de acceso.
 Usar POSTMAN para verificar manualmente la llamada al endpoint.
 Seguir la documentación de SWAGGER:
 Acceder a AEMET API SWAGGER para obtener toda la información relevante a volcar en Postman para verificar el correcto funcionamiento de nuestra petición.
-🛠️ Tecnologías Recomendadas
-React.js / Angular: Para la implementación de componentes.
-Axios / Fetch API: Para las llamadas a la API de AEMET.
-Leaflet.js: Para la visualización de mapas meteorológicos.
-Chart.js: Para la representación gráfica del pronóstico.
+
 
 
 ## Diseño de la propuesta de solución del problema
