@@ -45,64 +45,269 @@ Chart.js: Para la representación gráfica del pronóstico.
  
 
 # Ejercicio2
+## Historias de Usuario
+- Funcionalidad 1: Sistema de filtrado y búsquedas 
+✏️ Título: Búsqueda de Productos y Servicios
+
+📝 Descripción:
+"Como usuario, quiero poder buscar productos y servicios por nombre para encontrar rápidamente lo que necesito".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario ingresa un término en la barra de búsqueda, el sistema deberá mostrar resultados relevantes en tiempo real.
+
+Cuando el usuario realiza una búsqueda y no hay coincidencias, se deberá mostrar un mensaje indicando que no hay resultados.
+
+Entonces, la búsqueda deberá ser eficiente y mostrar los resultados en menos de 2 segundos.
+
+
+🔸 Historia de Usuario 2
+
+✏️ Título: Filtrado de Resultados
+
+📝 Descripción:
+"Como usuario, quiero poder filtrar los productos por categoría y precio para encontrar opciones que se ajusten a mis necesidades".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario selecciona una o varias opciones de filtrado, los resultados deberán actualizarse dinámicamente.
+
+Cuando el usuario combina varios filtros, la búsqueda deberá reflejar solo los productos que cumplan con todas las condiciones aplicadas.
+
+Entonces, los filtros deberán aplicarse en menos de 2 segundos para garantizar una experiencia fluida.
+
+
+🔸 Historia de Usuario 3
+
+✏️ Título: Paginación de Resultados
+
+📝 Descripción:
+"Como usuario, quiero poder navegar entre páginas de resultados cuando hay muchos productos para revisar varias opciones".
+
+🔸 Criterios de Aceptación:
+
+Dado que hay más resultados de los que pueden mostrarse en una sola página, el sistema deberá dividirlos en varias páginas con controles de navegación.
+
+Cuando el usuario cambia de página, los nuevos resultados deberán cargarse sin afectar el rendimiento de la web.
+
+Entonces, la navegación entre páginas deberá ser rápida y sin interrupciones, asegurando que el usuario pueda encontrar fácilmente lo que busca.
+
+- Funcionalidad 2: Sistema de perfil de usuario
+
+🔸 Historia de Usuario 1
+
+✏️ Título: Acceso a la pestaña de perfil
+
+📝 Descripción:
+"Como usuario, quiero poder acceder a mi perfil desde la barra de navegación para ver mi información personal".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario hace clic en el icono de usuario, se deberá desplegar un menú con opciones.
+
+Cuando el usuario seleccione "Ver información del usuario", se mostrará una pestaña emergente con sus datos.
+
+Entonces, el usuario podrá ver su información de manera clara y sin retrasos.
+
+🔸 Historia de Usuario 2
+
+✏️ Título: Cierre de sesión
+
+📝 Descripción:
+"Como usuario, quiero poder cerrar mi sesión desde el menú desplegable para salir de mi cuenta de manera segura".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario abre el menú del icono de usuario, se deberá mostrar la opción "Cerrar sesión".
+
+Cuando el usuario haga clic en "Cerrar sesión", su sesión deberá cerrarse correctamente y redirigirlo a la página de inicio.
+
+Entonces, la sesión se cerrará de manera segura y sin errores.
+
+🔸 Historia de Usuario 3
+
+✏️ Título: Experiencia de usuario en la pestaña emergente
+
+📝 Descripción:
+"Como usuario, quiero que la información en la pestaña emergente se vea clara y bien organizada para acceder rápidamente a mis datos".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario abre la pestaña de información, esta deberá mostrar nombre, teléfono y correo de forma clara.
+
+Cuando el usuario interactúe con la pestaña, esta no deberá interferir con el resto de la navegación.
+
+Entonces, la pestaña emergente deberá cerrarse correctamente al hacer clic fuera de ella o presionar "Cerrar".
+
+
+- Funcionalidad 3: Sistema de reserva con promociones y descuentos
+Validar que el formulario no permita envíos con campos vacíos.
+
+Probar que los datos ingresados se guardan correctamente en la base de datos.
+
+Confirmar que el usuario recibe un mensaje de confirmación tras enviar la reserva.
+
+Historias de Usuario
+
+🔸 Historia de Usuario 1
+
+✏️ Título: Visualización de Promociones
+
+📝 Descripción:
+"Como usuario, quiero ver las promociones disponibles en la página de inicio para conocer descuentos y ofertas especiales".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario accede a la página de inicio, deberá visualizar una sección con las promociones activas.
+
+Cuando el usuario seleccione una promoción, se mostrará la descripción y los detalles de la oferta.
+
+Entonces, el usuario podrá decidir si quiere aprovechar la promoción y reservarla.
+
+🔸 Historia de Usuario 2
+
+✏️ Título: Reserva de Promociones
+
+📝 Descripción:
+"Como usuario, quiero poder reservar una promoción ingresando mis datos para aprovechar la oferta sin complicaciones".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario hace clic en "Aprovechar oferta", se deberá abrir una pestaña emergente con un formulario.
+
+Cuando el usuario ingrese sus datos y haga clic en "Reservar", la información deberá enviarse al sistema correctamente.
+
+Entonces, el usuario recibirá una confirmación indicando que su reserva fue exitosa.
+
+🔸 Historia de Usuario 3
+
+✏️ Título: Validación y Confirmación de Reserva
+
+📝 Descripción:
+"Como usuario, quiero recibir una confirmación tras enviar mi reserva para asegurarme de que la promoción se ha registrado correctamente".
+
+🔸 Criterios de Aceptación:
+
+Dado que el usuario completa el formulario de reserva, el sistema deberá validar que todos los campos estén completos.
+
+Cuando la reserva se envíe correctamente, se mostrará un mensaje de confirmación.
+
+Entonces, el usuario podrá estar seguro de que su promoción ha sido registrada y podrá utilizarla según los términos indicados.
+
 ## Análisis del problema
-📌 Ejercicio 2: Funcionalidades Interactivas por Categoría
-El objetivo de este ejercicio es que el alumnado desarrolle funcionalidades interactivas avanzadas basadas en su categoría de proyecto. Se espera que implementen componentes reutilizables que permitan mejorar la experiencia del usuario mediante dashboards, comparadores, rankings, planificadores o encuestas.
-Cada categoría del proyecto incluye tres funcionalidades clave, que deben ser desarrolladas siguiendo las buenas prácticas de modularidad y reutilización de código.
+- Funcionalidad 1: Sistema de filtrado y búsquedas 
+Problema que resuelve:
+Los usuarios necesitan encontrar servicios y productos específicos de manera rápida y eficiente dentro de la plataforma. Actualmente, la navegación puede ser tediosa sin un sistema de búsqueda y filtrado adecuado.
 
-📅 Categoría 4: Sitio de Reservas (Restaurantes / Peluquerías)
-⚙️ Descripción de las funcionalidades
-1️⃣ Planificadores Inteligentes
-Sistema de gestión de citas con recordatorios automáticos.
-Visualización de disponibilidad en calendario interactivo.
-2️⃣ Rankings por Popularidad o Actividad
-Clasificación de los restaurantes/servicios más reservados por ubicación.
-Ranking basado en reseñas y puntuaciones de clientes.
-3️⃣ Sistemas de Encuestas o Votaciones
-Encuestas de satisfacción post-reserva.
-Sección de opiniones de clientes sobre la calidad del servicio.
+Relevancia para el usuario:
+Facilita la experiencia del usuario al permitirle encontrar rápidamente lo que necesita mediante criterios específicos como nombre, categoría, precio y disponibilidad.
 
+- Funcionalidad 2: Sistema de perfil de usuario
+ Problema que resuelve:
+Los usuarios necesitan acceder rápidamente a su información personal y gestionar su sesión de manera intuitiva. Sin una pestaña de perfil, la navegación puede ser menos eficiente y generar confusión.
 
+Relevancia para el usuario:
+Proporciona una manera sencilla y accesible de ver la información del usuario y gestionar su cuenta desde cualquier página de la plataforma.
 
+- Funcionalidad 3: Sistema de reserva con promociones y descuentos
+Problema que resuelve:
+Los usuarios necesitan conocer y aprovechar promociones especiales, así como reservarlas de manera sencilla sin necesidad de contacto directo con el establecimiento.
+
+Relevancia para el usuario:
+Facilita el acceso a descuentos y ofertas, optimizando la gestión de reservas mediante un sistema intuitivo y rápido dentro de la plataforma.
 
 
 ## Diseño de la propuesta de solución del problema
-- He hecho uso de módulos propiamentes de angular como ngfor,ngmodel,ngif,etc.Algunos no me los aceptaba así que tenía que importar módulos especiales como CommonModule y ReactiveFormsModule.
-- Inicio de Sesión: Permite a los usuarios ingresar con correo y contraseña. Incluye opciones de "Recordarme" y enlaces para registrarse o recuperar la contraseña.
-- Registro: Formulario para crear una nueva cuenta con nombre, correo y contraseña. Incluye validaciones básicas.
-- Recuperación de Contraseña: Envía un enlace de recuperación al correo ingresado si está registrado. Muestra mensajes claros en caso de éxito o error.
-- Habrá dos servicios,en los que en uno consumirán todos los componentes de lo que es la página principal y la pestaña de reservas y el otro servicio lo consumirán los componentes de registrar usuarios,iniciar sesión y recuperar contraseña.En este caso consume de AuthServer
-- También he implementado "textarea" para que el usuario pueda rellenar los campos de reserva
-- También la implementación de "Material" de angular para los recordatorios de reserva cada 30 segundos ha sido muy importante
-- También destacar el uso de EventEmitter para cerrar la encuesta una vez respondida y enviada
-- He hecho un contador para el ranking de cortes de pelo para que el usuario pueda elegir que corte de pelo votar y un sort,para cuando el número de votos de un corte de pelo sea mayor a otro,se ordene de forma descendente,el usuario podrá ver que corte de pelo son los más votados
+- Funcionalidad 1: Sistema de filtrado y búsquedas 
+ Nuevo elemento integrado en el navbar,"cortes", en el que al hacer click se desplegará una pestaña con la barra de búsqueda y el desplegable de todos los estilos, y juste debajo de los dos elementos anteriores,estarán todos cortes de pelo.
+
+- Funcionalidad 2: Sistema de perfil de usuario
+Icono de usuario en la barra de navegación.
+Pestaña desplegable con opciones: "Ver información del usuario" y "Cerrar sesión".
+Pestaña emergente con la información del usuario.
+El icono de usuario se encuentra en la barra de navegación.
+Al hacer clic en el icono, se despliega un menú negro con opciones.
+Al seleccionar "Ver información del usuario", aparece una pestaña blanca con los datos personales del usuario.
+
+- Funcionalidad 3: Sistema de reserva con promociones y descuentos
+Promotions: Sección en la pantalla principal (Home) donde se muestran las promociones activas.
+Reserva-Promoción: Pestaña emergente que permite a los usuarios reservar una promoción ingresando sus datos.
+La sección "Promociones y Ofertas Especiales" estará visible en la página de inicio.
+Cada promoción incluirá un botón "Aprovechar oferta".
+Al hacer clic en el botón, se abrirá la pestaña emergente de reserva con un formulario.
+Tras enviar la reserva, el usuario recibirá una confirmación.
  
+## Pruebas de la resolución del problema
+- Funcionalidad 1: Sistema de filtrado y búsquedas 
+ Se agregará una barra de búsqueda en la cabecera de la web.
+ Los filtros se mostrarán en la barra lateral en la vista de productos/servicios.
+ Se implementará una página de resultados con ordenamiento y paginación.
+ Se reutilizarán componentes existentes como listas, tarjetas de productos, el navbar y reservas.
+ La búsqueda se implementará con un campo de entrada controlado y peticiones a la API para filtrar los resultados en tiempo real.
+ La información del usuario se obtendrá desde datos mockeados y se mostrará en la pestaña emergente.
+
+- Funcionalidad 2: Sistema de perfil de usuario
+ Se reutilizarán componentes de menú desplegable, modal emergente y el navbar.
+ El menú desplegable se activará mediante eventos de clic en el icono de usuario.
+ La información del usuario se obtendrá desde datos mockeados y se mostrará en la pestaña emergente.
+
+- Funcionalidad 3: Sistema de reserva con promociones y descuentos
+ - Promotions:
+Se implementa como un componente de lista dinámico donde se cargan las promociones activas desde el backend.
+Cada promoción incluye imagen, descripción, descuento y fecha de vencimiento.
+Se incorpora un botón "Aprovechar oferta" que activa el modal de reserva.
+
+ - Reserva-Promoción:
+Componente modal que incluye un formulario con los campos "Nombre", "Teléfono" y "Correo".
+Al hacer clic en "Reservar", los datos se envían al backend y se genera una reserva de la promoción.
+Se muestra una confirmación al usuario.
 
 ## Pruebas de la resolución del problema
-- ✅ Prueba 1: Planificador de reservas
-Seleccionar una fecha y hora de reserva.
-Verificar que el sistema muestra la disponibilidad adecuada y permite la confirmación.
+- Funcionalidad 1: Sistema de filtrado y búsquedas 
+ - ✅ Prueba 1: Probar que los filtros funcionan correctamente.
+Seleccionar un corte de pelo en el desplegable de filtros.
+
+ ![gif](./recursos/Prueba1.gif)
+
+ - ✅ Prueba 2: Sistema de Búsqueda
+ Probar buscando un corte de pelo específico y validar que al hacer click nos lleve a la página de reservas
+
+![gif](./recursos/Prueba2.gif)
+
+ - ✅ Prueba 3: Asegurar que la paginación funciona correctamente y no repite ni omite resultados.
+ Hacer scroll para validar que los datos no se cortan y que todos los datos se visualizan
+
+ ![gif](./recursos/Prueba3.gif)
+
+- Funcionalidad 2: Sistema de perfil de usuario
+ - ✅ Prueba 1: Verificar que al hacer clic en el icono de usuario se despliega el menú con opciones.
 
 
- ![gif](./recursos/Prueba1Ej2_Sprint2.2.gif)
+ ![gif](./recursos/Prueba4.gif)
 
-- ✅ Prueba 2: Rankings de popularidad
-Ordenar servicios por popularidad y ubicación.
-Validar que el ranking refleja correctamente las puntuaciones de clientes.
+ - ✅ Prueba 2: Comprobar que al seleccionar "Ver información del usuario", aparece la pestaña blanca con los datos correctos.
 
+![gif](./recursos/Prueba5.gif)
 
-
-![gif](./recursos/Prueba2Ej2_Sprint2.2.gif)
-
-- ✅ Prueba 3: Encuestas de satisfacción
-Completar una encuesta después de una reserva.
-Verificar que la opinión influye en la clasificación del servicio.
+ - ✅ Prueba 3: Asegurar que el menú se cierra correctamente al hacer clic fuera de él o en la cruz.
 
 
- ![gif](./recursos/Prueba3Ej2_Sprint2.2.gif)
+ ![gif](./recursos/Prueba6.gif)
+
+- Funcionalidad 3: Sistema de reserva con promociones y descuentos
+ - ✅ Prueba 1: Verificar que las promociones se cargan correctamente y se visualizan en la pantalla principal.
 
 
+ ![gif](./recursos/Prueba7.gif)
 
+ - ✅ Prueba 2: Validar que el formulario no permita envíos con campos vacíos.
+
+![gif](./recursos/Prueba8.gif)
+
+ - ✅ Prueba 3: Validar que al rellenar bien los campos se visualiza la alerta de reserva confirmada
+
+
+ ![gif](./recursos/Prueba9.gif)
 
 
 
